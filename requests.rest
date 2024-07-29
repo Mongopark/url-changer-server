@@ -64,11 +64,9 @@ POST http://localhost:8000/api/signup
 Content-Type: application/json
 
 {
-  "firstName": "Adam",
-  "lastName": "FirstMan",
+  "name": "Adam FirstMan",
   "email": "samlarrymarlian@gmail.com",
-  "password": "Mongopark1@",
-  "phone": "07053005601"
+  "password": "Mongopark1@"
 }
 
 
