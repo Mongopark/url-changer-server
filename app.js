@@ -38,7 +38,26 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
     }));
 app.use(cookieParser());
-app.use(cors());
+// app.use(cors()); //THIS WAS USED BEFORE DEPLOTMENT NOW REPLACED WITH THE BELOW
+
+
+
+// CORS Configuration
+const allowedOrigins = ['https://urlchanger.netlify.app', 'http://localhost:3000', 'http://localhost:5173']; // Add your frontend URLs here
+app.use(cors({
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
+    credentials: true // This allows cookies to be sent cross-origin
+}));
+
+
 
 
 // ROUTES MIDDLEWARE

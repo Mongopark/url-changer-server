@@ -29,7 +29,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY
 
 {
   "name": "Facebook Url",
-  "url": "https://facebook.com",
+  "url": "https://instagram.com",
   "description": "a url to facebook page"
 }
 
@@ -60,14 +60,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY
 
 
 ### Create a USER 1
-POST http://localhost:8000/auth/register
+POST http://localhost:8000/api/signup
 Content-Type: application/json
 
 {
   "firstName": "Adam",
   "lastName": "FirstMan",
-  "email": "samlarrymarlian@email.com",
-  "password": "lileunited",
+  "email": "samlarrymarlian@gmail.com",
+  "password": "Mongopark1@",
   "phone": "07053005601"
 }
 
