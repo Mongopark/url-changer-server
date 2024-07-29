@@ -1,0 +1,134 @@
+### Get a USER RECORD by ID
+GET http://localhost:8000/api/user/66a4bd31ca0b1733887ff85b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+
+### Get My Account
+GET http://localhost:8000/api/getme
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+
+
+### Change My Password
+POST http://localhost:8000/api/password/edit
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+{
+  "oldPassword": "Mongopark1@",
+  "newPassword": "Mongopark2@"
+}
+
+
+
+### SHORTEN A URL
+POST http://localhost:8000/api/shorturl
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+{
+  "name": "Facebook Url",
+  "url": "https://facebook.com",
+  "description": "a url to facebook page"
+}
+
+
+### GET A URL
+GET http://localhost:8000/api/url/hmzsyg
+Content-Type: application/json
+
+
+
+### GET ALL URLS
+GET http://localhost:8000/api/geturls
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+
+### Get My Account
+GET http://localhost:8000/api/profile/edit
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+{
+  "name": "name",
+  "description": "description"
+,  "price": 30,
+  "image": "rtyuj"
+}
+
+
+### Create a USER 1
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Adam",
+  "lastName": "FirstMan",
+  "email": "samlarrymarlian@email.com",
+  "password": "lileunited",
+  "phone": "07053005601"
+}
+
+
+### Create Organisation
+POST http://localhost:8000/api/org/create
+Content-Type: application/json
+
+{
+  "title": "Gramme Organisation2",
+  "description": "This is Gram's Third organisation",
+  "user_id": "66a36f64a4406142b0b4d9ef"
+}
+
+### Add Member to Organisation
+POST http://localhost:8000/api/org/add/66a395218aa0af3958667181
+Content-Type: application/json
+
+{
+  "email": "mongsolompn@gmail.com"
+}
+
+
+### Get Single User Organisation
+GET http://localhost:8000/api/org/get/66a36f64a4406142b0b4d9ef
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+
+### CREATE A CATEGORY
+POST http://localhost:8000/api/category/create
+Content-Type: application/json
+
+{
+  "name": "profile pic"
+}
+
+### Get User Organisations
+GET http://localhost:8000/organisations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+
+###List USERS
+GET http://localhost:8000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+### LOGIN USER
+POST http://localhost:8000/api/signin
+Content-Type: application/json
+
+{
+  "email":"mongisrael@gmail.com",
+  "password":"Mongopark1@"
+}
+
+###REFRESH TOKENS
+GET http://localhost:8000/auth/refresh_token
+
+###
+
+DELETE http://localhost:8000/auth/refresh_token
+###
+
+DELETE http://localhost:8000/users
