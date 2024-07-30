@@ -40,7 +40,10 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use(cookieParser());
 // app.use(cors()); //THIS WAS USED BEFORE DEPLOTMENT NOW REPLACED WITH THE BELOW
 // Allow all origins
-const corsOptions = { credentials: true, origin: '*' }; // THE BELOW IS A WORSE ALTERNATIVE
+const corsOptions = { 
+    // credentials: true, 
+    origin: '*' 
+}; // THE BELOW IS A WORSE ALTERNATIVE
 app.use(cors(corsOptions));
 
 
