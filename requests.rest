@@ -60,7 +60,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY
 
 
 ### Create a USER 1
-POST http://localhost:8000/api/signup
+POST https://yourlinkapp.vercel.app/api/signup
 Content-Type: application/json
 
 {
