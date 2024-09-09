@@ -101,9 +101,36 @@ Content-Type: application/json
 
 
 ### Get Single User Spin Records
-GET http://localhost:8000/api/spin/get/66dee47970998d273412590f
+GET http://localhost:8000/api/spin/get/66a82033c0ecb92ac8322a08
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
+
+
+### Create Spin Record LIVE
+POST https://yourlinkapp.vercel.app/api/spin/create
+Content-Type: application/json
+
+{
+  "title": "Dumebi",
+  "color": "blue",
+  "user_id": "66c063f6b0c3b200039821e0"
+}
+
+### Delete Spin Record, where the spin record ins passed in body LIVE
+DELETE https://yourlinkapp.vercel.app/api/spin/delete/66c063f6b0c3b200039821e0
+Content-Type: application/json
+
+{
+  "id": "66e0036c1d0ad4000329070d"
+}
+
+
+### Get Single User Spin Records LIVE
+GET https://yourlinkapp.vercel.app/api/spin/get/66c063f6b0c3b200039821e0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
 
 
 
