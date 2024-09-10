@@ -17,6 +17,7 @@ const bannerRoutes = require('./routes/banner');
 const orgRoutes = require('./routes/organisation');
 const userRoutes = require('./routes/user');
 const urlRoutes = require('./routes/url');
+const spinRoutes = require('./routes/spin');
 
 
 
@@ -73,6 +74,7 @@ app.use("/api", bannerRoutes)
 app.use("/api", orgRoutes)
 app.use("/api", userRoutes)
 app.use("/api", urlRoutes)
+app.use("/api", spinRoutes)
 
 
 

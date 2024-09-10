@@ -65,9 +65,46 @@ Content-Type: application/json
 
 {
   "name": "Adam FirstMan",
-  "email": "samlarrymarlian@gmail.com",
+  "email": "samlarrymarliano@gmail.com",
   "password": "Mongopark1@"
 }
+
+
+### Create a USER 2
+POST http://localhost:8000/api/signup
+Content-Type: application/json
+
+{
+  "name": "Adam FirstMan",
+  "email": "samlarryandmarlian@gmail.com",
+  "password": "Mongopark1@"
+}
+
+
+### Create Spin Record
+POST http://localhost:8000/api/spin/create
+Content-Type: application/json
+
+{
+  "title": "Dumebi",
+  "color": "blue",
+  "user_id": "66dee47970998d273412590f"
+}
+
+### Delete Spin Record, where the spin record ins passed in body
+DELETE http://localhost:8000/api/spin/delete/66dee47970998d273412590f
+Content-Type: application/json
+
+{
+  "id": "66def951b74b31360859d75a"
+}
+
+
+### Get Single User Spin Records
+GET http://localhost:8000/api/spin/get/66dee47970998d273412590f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRiZDMxY2EwYjE3MzM4ODdmZjg1YiIsImlhdCI6MTcyMjA5NTc0MiwiZXhwIjoxMDM2MjA5NTc0Mn0.REsuHLgD4F5l5bnDyEtULHaL-TNgW9wOxs5U5Ij2NRU
+
 
 
 ### Create Organisation
@@ -117,8 +154,8 @@ POST http://localhost:8000/api/signin
 Content-Type: application/json
 
 {
-  "email":"mongisrael@gmail.com",
-  "password":"Mongopark1@"
+  "email": "samlarrymarlian@gmail.com",
+  "password": "Mongopark1@"
 }
 
 ###REFRESH TOKENS

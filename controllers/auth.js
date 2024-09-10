@@ -75,7 +75,7 @@ const generateToken = async (user, statusCode, res) =>{
     res
     .status(statusCode)
     .cookie('token', token, options )
-    .json({success: true, token, id:user.id, message: "Logged In Successfully"})
+    .json({success: true, token, id:user.id, user, message: "Logged In Successfully"})
 }
 
 
